@@ -1,12 +1,23 @@
 // Check off specific todos by clicking
-$("ul").on("click", "li", function(){    
+// adding event listener when code is first run
+// that listens for click event on any li's that are there or added later
+$("ul").on("click", "li", function(){
     $(this).toggleClass("completed");
 })
 
+
 // The "X" button
+// the wrong way to do it
+// $('span').click(function(event) {
+//   ...
+// })
+
+// use .on (intead of .click) b/c .on listens for all 'ul's added after initialization as well
+// adding event listener when code is first run
+// that listens for click event on any li's that are there or added later
 $("ul").on("click", "span", function(event){
     event.stopPropagation();
-    
+
     // remove the li (parent) the "x"(span) is in
     $(this).parent().fadeOut(500, function(){
         $(this).remove();

@@ -57,6 +57,7 @@ input[type="text"] {
     color: #2980b9;
     border: none;
     box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
 }
 
 input[type="text"]:focus {
